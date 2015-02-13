@@ -2,3 +2,5 @@ source 'https://rubygems.org'
 
 # Specify your gem's dependencies in paysafecard.gemspec
 gemspec
+
+gem "savon", github: 'phillipp/savon'
