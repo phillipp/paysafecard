@@ -48,7 +48,7 @@ module Paysafecard
       production          = (environment || ENVIRONMENT) == 'production'
       @payment_panel_url  = production ? LIVE_PAYMENT_PANEL : TEST_PAYMENT_PANEL
       @wsdl_url           = production ? LIVE_WSDL : TEST_WSDL
-      @client             = Savon.client(wsdl: @wsdl_url)
+      @client             = Savon.client(wsdl: @wsdl_url, logger: Rails.logger, log_level: :debug, log: true)
       @currency           = 'EUR'
       yield(self) if block_given?
     end
