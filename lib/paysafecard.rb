@@ -1,3 +1,4 @@
+require "savon"
 require "paysafecard/transaction"
 require "paysafecard/version"
 
